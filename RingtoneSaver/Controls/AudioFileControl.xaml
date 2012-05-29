@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="RingtoneSaver.Controls.AudioFileControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480"
+	>
+    
+    <Grid x:Name="LayoutRoot">
+		<StackPanel Orientation="Horizontal">
+			<Button Command="{Binding PlayAudioCommand}" 
+                    CommandParameter="{Binding FileUrl}" 
+                    Margin="{StaticResource PhoneTouchTargetOverhang}">
+				<Button.Template>
+					<ControlTemplate>
+						<Grid Height="48" Width="48" Background="{StaticResource PhoneForegroundBrush}">
+							<Grid.OpacityMask>
+								<ImageBrush ImageSource="/Resources\Images\play.png" />
+							</Grid.OpacityMask>
+						</Grid>
+					</ControlTemplate>
+				</Button.Template>
+			</Button>
+
+            <Button Command="{Binding SaveRingtoneCommand}" 
+                    CommandParameter="{Binding FileUrl}" 
+                    Margin="{StaticResource PhoneTouchTargetOverhang}">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Grid Height="48" Width="48" Background="{StaticResource PhoneForegroundBrush}">
+                            <Grid.OpacityMask>
+                                <ImageBrush ImageSource="/Resources\Images\save.png" />
+                            </Grid.OpacityMask>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <TextBlock VerticalAlignment="Center" Text="{Binding Title}" />
+		</StackPanel>
+	</Grid>
+</UserControl>
