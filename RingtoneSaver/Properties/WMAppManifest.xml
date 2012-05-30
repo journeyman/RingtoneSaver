@@ -20,14 +20,14 @@
       <Capability Name="ID_CAP_APPOINTMENTS"/>
     </Capabilities>
     <Tasks>
-      <DefaultTask  Name ="_default" NavigationPage="Views/WaveformView.xaml"/>
+      <DefaultTask  Name ="_default" NavigationPage="Views/MainPage.xaml"/>
     </Tasks>
     <Tokens>
       <PrimaryToken TokenID="RingtoneSaverToken" TaskName="_default">
         <TemplateType5>
           <BackgroundImageURI IsRelative="true" IsResource="false">Background.png</BackgroundImageURI>
           <Count>0</Count>
-          <Title>Минсктранс</Title>
+          <Title>RingtoneSaver</Title>
         </TemplateType5>
       </PrimaryToken>
     </Tokens>

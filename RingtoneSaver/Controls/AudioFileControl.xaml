@@ -3,7 +3,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
+             xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+             mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -14,10 +15,12 @@
 		<StackPanel Orientation="Horizontal">
 			<Button Command="{Binding PlayAudioCommand}" 
                     CommandParameter="{Binding FileUrl}" 
-                    Margin="{StaticResource PhoneTouchTargetOverhang}">
+                    Margin="{StaticResource PhoneTouchTargetOverhang}"
+					toolkit:TiltEffect.IsTiltEnabled="True"
+					>
 				<Button.Template>
 					<ControlTemplate>
-						<Grid Height="48" Width="48" Background="{StaticResource PhoneForegroundBrush}">
+						<Grid Height="64" Width="64" Background="{StaticResource PhoneForegroundBrush}">
 							<Grid.OpacityMask>
 								<ImageBrush ImageSource="/Resources\Images\play.png" />
 							</Grid.OpacityMask>
@@ -28,10 +31,12 @@
 
             <Button Command="{Binding SaveRingtoneCommand}" 
                     CommandParameter="{Binding FileUrl}" 
-                    Margin="{StaticResource PhoneTouchTargetOverhang}">
+                    Margin="{StaticResource PhoneTouchTargetOverhang}"
+					toolkit:TiltEffect.IsTiltEnabled="True"
+					>
                 <Button.Template>
                     <ControlTemplate>
-                        <Grid Height="48" Width="48" Background="{StaticResource PhoneForegroundBrush}">
+                        <Grid Height="64" Width="64" Background="{StaticResource PhoneForegroundBrush}">
                             <Grid.OpacityMask>
                                 <ImageBrush ImageSource="/Resources\Images\save.png" />
                             </Grid.OpacityMask>

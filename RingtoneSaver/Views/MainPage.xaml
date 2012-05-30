@@ -16,25 +16,24 @@
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-			<StackPanel>
-				<controls:AudioFileControl 
-                    Title="Opiate Soul" 
-                    FileUrl="/Resources/Audio/OpiateSoul.mp3"
-                    PlayAudioCommand="{Binding PlayAudioCommand}" 
-                    SaveRingtoneCommand="{Binding SaveRingtoneCommand}" 
-                    />
+
+		<StackPanel x:Name="ContentPanel" Margin="12,0,12,0">
+			<controls:AudioFileControl 
+                Title="Opiate Soul" 
+                FileUrl="/Resources/Audio/OpiateSoul.mp3"
+                PlayAudioCommand="{Binding PlayAudioCommand}" 
+                SaveRingtoneCommand="{Binding SaveRingtoneCommand}" 
+                />
                 
-				<controls:AudioFileControl 
-                    Title="Omen" 
-                    FileUrl="/Resources/Audio/Omen.mp3" 
-                    PlayAudioCommand="{Binding PlayAudioCommand}" 
-                    SaveRingtoneCommand="{Binding SaveRingtoneCommand}" 
-                    />
+			<controls:AudioFileControl 
+                Title="Omen" 
+                FileUrl="/Resources/Audio/Omen.mp3" 
+                PlayAudioCommand="{Binding PlayAudioCommand}" 
+                SaveRingtoneCommand="{Binding SaveRingtoneCommand}" 
+                />
 				
-				<Button Click="Button_Click" Content="Go to waveform" />
-			</StackPanel>
-		</Grid>
+			<Button Click="Button_Click" Content="Go to waveform" />
+		</StackPanel>
     </Grid>
  
 </phone:PhoneApplicationPage>

@@ -16,7 +16,7 @@ namespace RingtoneSaver.Infrastructure.Common
         public static string GetFileNameWithExtensionFromUri(Uri uri)
         {
             int indexOfLastSlash = uri.OriginalString.LastIndexOf('/');
-            string fileName = uri.OriginalString.Substring(indexOfLastSlash);
+            string fileName = uri.OriginalString.Substring(indexOfLastSlash + 1);
             return fileName;
         }
     }

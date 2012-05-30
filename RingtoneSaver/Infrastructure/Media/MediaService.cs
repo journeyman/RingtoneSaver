@@ -27,7 +27,7 @@ namespace RingtoneSaver.Infrastructure.Media
         {
             var isoStoreUri = TruncateTo1MbAndSave(uri);
             SaveRingtoneTask task = new SaveRingtoneTask();
-            task.Completed += new EventHandler<TaskEventArgs>(task_Completed);
+            task.Completed += task_Completed;
             task.IsShareable = true;
             task.Source = isoStoreUri;
             task.Show();

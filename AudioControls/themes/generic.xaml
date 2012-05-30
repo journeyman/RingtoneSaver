@@ -22,5 +22,22 @@
 			</Setter.Value>
 		</Setter>
 	</Style>
-	
+
+	<Style TargetType="local:FileCutterControl">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate>
+					<Canvas Height="{TemplateBinding Height}">
+						<Rectangle Width="300" Height="150" Fill="{StaticResource PhoneAccentBrush}" Opacity=".4">
+							<toolkit:GestureService.GestureListener>
+								<toolkit:GestureListener x:Name="GestureListener" />
+							</toolkit:GestureService.GestureListener>
+						</Rectangle>
+						<ContentPresenter />
+					</Canvas>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
 </ResourceDictionary>

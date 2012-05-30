@@ -21,7 +21,7 @@ namespace RingtoneSaver.Controls
 			((FrameworkElement)FindName("LayoutRoot")).DataContext = this;
 		}
 
-		public const string TitlePropertyName = "Title";
+		private const string TitlePropertyName = "Title";
 		public string Title
 		{
 			get { return (string)GetValue(TitleProperty); }
@@ -34,7 +34,7 @@ namespace RingtoneSaver.Controls
 			typeof(AudioFileControl),
 			new PropertyMetadata(null));
 
-		public const string FileUrlPropertyName = "FileUrl";
+		private const string FileUrlPropertyName = "FileUrl";
 		public string FileUrl
 		{
 			get { return (string)GetValue(FileUrlProperty); }
