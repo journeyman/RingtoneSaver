@@ -32,7 +32,7 @@
                 SaveRingtoneCommand="{Binding SaveRingtoneCommand}" 
                 />
 				
-			<Button Click="Button_Click" Content="Go to waveform" />
+			<Button Click="Button_Click" Content="Go to Dropbox" />
 		</StackPanel>
     </Grid>
  
