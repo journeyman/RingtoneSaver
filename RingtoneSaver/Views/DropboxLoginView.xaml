@@ -6,22 +6,24 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:SampleData="clr-namespace:Expression.Blend.SampleData.SampleDropboxLoginViewModel"
+    xmlns:Controls="clr-namespace:RingtoneSaver.Controls"
     x:Class="RingtoneSaver.Views.DropboxLoginView"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    mc:Ignorable="d" d:DesignHeight="696" d:DesignWidth="480"
     shell:SystemTray.IsVisible="True">
 
-	<phone:PhoneApplicationPage.ApplicationBar>
-		<shell:ApplicationBar>
-			<shell:ApplicationBarIconButton IconUri="/icons/appbar.check.rest.png" Text="login"/>
-		</shell:ApplicationBar>
-	</phone:PhoneApplicationPage.ApplicationBar>
+    <phone:PhoneApplicationPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resources/Styles/DropboxLoginViewStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </phone:PhoneApplicationPage.Resources>
     
-	<d:DataContext>
-        <SampleData:SampleDropboxLoginViewModel />
-	</d:DataContext>
+	
 
-    <StackPanel Grid.Row="0" Margin="12,17,0,28" Background="Transparent" >
+
+    <StackPanel Grid.Row="0" Margin="12,17,0,28" Background="Green" >
         <TextBlock x:Name="ApplicationTitle" Text="Ringtone Saver" Style="{StaticResource PhoneTextNormalStyle}"/>
         <TextBlock x:Name="PageTitle" Text="dropbox login" Margin="12,0,12,24" Style="{StaticResource PhoneTextTitle1Style}"/>
         <StackPanel Height="100" Margin="0,16,0,0">
@@ -34,4 +36,18 @@
         </StackPanel>
     </StackPanel>
 
+    
+    
+    <Controls:Bindable.ApplicationBar>
+        <Controls:BindableApplicationBar BindableOpacity="0.5">
+            <Controls:BindableApplicationBarButton IconUri="Resources/Icons/appbar.check.rest.png" Text="login" IsEnabled="{Binding IsBusy, Converter={StaticResource BoolInversionConverter}}"/>
+        </Controls:BindableApplicationBar>
+    </Controls:Bindable.ApplicationBar>
+    
+    
+    
+    <d:DesignProperties.DataContext>
+        <SampleData:SampleDropboxLoginViewModel />
+    </d:DesignProperties.DataContext>
+    
 </phone:PhoneApplicationPage>

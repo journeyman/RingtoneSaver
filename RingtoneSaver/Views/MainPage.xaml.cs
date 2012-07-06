@@ -26,7 +26,7 @@ namespace RingtoneSaver
 
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
-			NavigationService.Navigate(new Uri("/Views/WaveformView.xaml", UriKind.RelativeOrAbsolute));
+			NavigationService.Navigate(new Uri("/Views/DropboxLoginView.xaml", UriKind.RelativeOrAbsolute));
 		}
 	}
 }

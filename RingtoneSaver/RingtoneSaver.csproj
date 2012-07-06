@@ -54,6 +54,7 @@
       <HintPath>..\packages\reactiveui-wp7.2.5.1.0\lib\sl3-wp\Microsoft.Expression.Interactions.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL">
       <HintPath>..\packages\SilverlightToolkitWP.4.2011.12.14\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>
@@ -103,6 +104,11 @@
     <Compile Include="Controls\AudioFileControl.xaml.cs">
       <DependentUpon>AudioFileControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\BindableApplicationBar\Bindable.cs" />
+    <Compile Include="Controls\BindableApplicationBar\BindableApplicationBar.cs" />
+    <Compile Include="Controls\BindableApplicationBar\BindableApplicationBarButton.cs" />
+    <Compile Include="Controls\BindableApplicationBar\BindableApplicationBarMenuItem.cs" />
+    <Compile Include="Converters\BoolInversionConverter.cs" />
     <Compile Include="Infrastructure\Common\Bootstrapper.cs" />
     <Compile Include="Infrastructure\Common\FileNameResolver.cs" />
     <Compile Include="Infrastructure\Media\IAudioPlayer.cs" />
@@ -111,6 +117,7 @@
     <Compile Include="SampleData\SampleDropboxLoginViewModel\SampleDropboxLoginViewModel.xaml.cs">
       <DependentUpon>SampleDropboxLoginViewModel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Utils\VisualTreeExtensions.cs" />
     <Compile Include="Views\DropboxLoginView.xaml.cs">
       <DependentUpon>DropboxLoginView.xaml</DependentUpon>
     </Compile>
@@ -137,6 +144,14 @@
       <Generator>MSBuild:MarkupCompilePass1</Generator>
       <SubType>Designer</SubType>
     </DesignTimeOnly>
+    <Page Include="Resources\Styles\CommonStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Styles\DropboxLoginViewStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\DropboxLoginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -163,7 +178,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Resource Include="Background.png" />
-    <Content Include="icons\appbar.check.rest.png">
+    <Content Include="Resources\Icons\appbar.check.rest.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Audio\Omen.mp3" />
