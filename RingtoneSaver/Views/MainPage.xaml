@@ -6,7 +6,8 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:controls="clr-namespace:RingtoneSaver.Controls" mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    xmlns:controls="clr-namespace:RingtoneSaver.Controls"
+    xmlns:audioControls="clr-namespace:AudioControls;assembly=AudioControls" mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -32,6 +33,8 @@
                 SaveRingtoneCommand="{Binding SaveRingtoneCommand}" 
                 />
 				
+            <audioControls:FileCutterControl />
+            
 			<Button Click="Button_Click" Content="Go to Dropbox" />
 		</StackPanel>
     </Grid>
