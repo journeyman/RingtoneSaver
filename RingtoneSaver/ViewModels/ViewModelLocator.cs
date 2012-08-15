@@ -2,10 +2,10 @@
 {
 	public static class ViewModelLocator
 	{
-		private static MainViewModel mainViewModel;
+		private static MainViewModel _mainViewModel;
 		public static MainViewModel MainViewModel
 		{
-			get { return mainViewModel ?? (mainViewModel = new MainViewModel()); }
+			get { return _mainViewModel ?? (_mainViewModel = new MainViewModel()); }
 		}
 	}
 }

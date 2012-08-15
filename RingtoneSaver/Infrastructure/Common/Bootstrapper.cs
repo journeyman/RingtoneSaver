@@ -8,9 +8,7 @@ namespace RingtoneSaver.Infrastructure.Common
 	{
 		public static void InitApp()
 		{
-			var mediaElement = Application.Current.Resources["MediaElement"] as MediaElement;
-
-			MediaService.Init(new MediaElementAudioPlayer(mediaElement));
+			MediaService.Init(new MediaElementAudioPlayer(new MediaElement()));
 		}
 	}
 }
