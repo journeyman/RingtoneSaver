@@ -56,27 +56,10 @@
     <Reference Include="Microsoft.Phone" />
     <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL">
-      <HintPath>..\packages\SilverlightToolkitWP.4.2011.12.14\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Phone.Interop" />
-    <Reference Include="ReactiveUI.Blend_WP7">
-      <HintPath>..\packages\reactiveui-wp7.2.5.1.0\lib\sl3-wp\ReactiveUI.Blend_WP7.dll</HintPath>
-    </Reference>
-    <Reference Include="ReactiveUI.Routing_WP7">
-      <HintPath>..\packages\reactiveui-wp7.2.5.1.0\lib\sl3-wp\ReactiveUI.Routing_WP7.dll</HintPath>
-    </Reference>
-    <Reference Include="ReactiveUI.Serialization_WP7">
-      <HintPath>..\packages\reactiveui-wp7.2.5.1.0\lib\sl3-wp\ReactiveUI.Serialization_WP7.dll</HintPath>
-    </Reference>
-    <Reference Include="ReactiveUI.Testing_WP7">
-      <HintPath>..\packages\reactiveui-wp7.2.5.1.0\lib\sl3-wp\ReactiveUI.Testing_WP7.dll</HintPath>
-    </Reference>
-    <Reference Include="ReactiveUI.Xaml_WP7">
-      <HintPath>..\packages\reactiveui-wp7.2.5.1.0\lib\sl3-wp\ReactiveUI.Xaml_WP7.dll</HintPath>
-    </Reference>
-    <Reference Include="ReactiveUI_WP7">
-      <HintPath>..\packages\reactiveui-wp7.2.5.1.0\lib\sl3-wp\ReactiveUI_WP7.dll</HintPath>
-    </Reference>
     <Reference Include="System.Observable" />
     <Reference Include="System.Reactive">
       <HintPath>..\packages\reactiveui-wp7.2.5.1.0\lib\sl3-wp\System.Reactive.dll</HintPath>
