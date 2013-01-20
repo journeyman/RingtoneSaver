@@ -10,13 +10,25 @@
 			<Setter.Value>
 				<ControlTemplate>
 					<Canvas x:Name="RootCanvas" Height="{TemplateBinding Height}">
-                        <Rectangle x:Name="CroppingMask" Width="300" Height="{TemplateBinding Height}" 
-                                   Fill="{StaticResource PhoneAccentBrush}" Opacity=".4" />
+                        <local:CroppingMask x:Name="CroppingMask" Height="{TemplateBinding Height}" Width="300" />
 						<ContentPresenter />
 					</Canvas>
 				</ControlTemplate>
 			</Setter.Value>
 		</Setter>
 	</Style>
+
+    <Style TargetType="local:CroppingMask">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Canvas x:Name="RootPanel" MinWidth="{TemplateBinding MinWidth}" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" Background="Purple">
+                        <Rectangle x:Name="LeftBorder" Width="5" Height="{TemplateBinding Height}" Fill="Lime" />
+                        <Rectangle x:Name="RightBorder" Width="5" Height="{TemplateBinding Height}" Fill="Lime"/>
+                    </Canvas>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
 </ResourceDictionary>

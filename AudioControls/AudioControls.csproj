@@ -55,9 +55,9 @@
     <Reference Include="mscorlib.extensions" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CroppingMask.cs" />
     <Compile Include="FileCutterControl.cs" />
-    <Compile Include="UniformStackPanel.cs" />
-    <Compile Include="WaveformVisualizer.cs" />
+    <Compile Include="IFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
